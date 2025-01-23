@@ -45,10 +45,12 @@ def processar_temperaturas(path_do_txt: Path):
 
     # Calculando min, média e max para cada estação
     for station, temperatures in temperatura_por_station.items():
+        # print(f"Mostrando estrutura: {station}, {temperatures}")
         min_temp = min(temperatures)
         mean_temp = sum(temperatures) / len(temperatures)
         max_temp = max(temperatures)
         results[station] = (min_temp, mean_temp, max_temp)
+
 
     print("Estatística calculada. Ordenando...")
     # Ordenando os resultados pelo nome da estação

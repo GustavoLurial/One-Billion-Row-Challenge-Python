@@ -1,6 +1,5 @@
 import duckdb
 import time
-
 def create_duckdb():
     duckdb.sql("""
         SELECT station,
